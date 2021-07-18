@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #edeeed;
+  position: relative;
+}
+
+.drops {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: transparent;
+  border-radius: 53% 47% 64% 36% / 45% 45% 55% 55%;
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+    15px 25px 10px rgba(0, 0, 0, 0.2), 15px 20px 20px rgba(255, 255, 255, 0.9),
+    inset 10px 10px 20px rgba(0, 0, 0, 0.09);
+}
+
+.drop::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 35px;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 57% 43% 40% 60% / 58% 57% 43% 42%;
+}
+
+.drop::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 65px;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 36% 64% 19% 81% / 74% 38% 62% 26%;
+}
+
+.drop:nth-child(2) {
+  transform: scale(0.5) translate(-200px, 180px);
+  border-radius: 53% 47% 64% 36% / 45% 45% 45% 45%;
+}
+
+.drop:nth-child(3) {
+  transform: scale(0.5) translate(280px, 15px);
+  border-radius: 53% 47% 64% 36% / 45% 45% 55% 65%;
+}
+
+.drop:nth-child(4) {
+  transform: scale(0.35) translate(230px, -250px);
+  border-radius: 38% 62% 36% 64% / 47% 57% 43% 53%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 30px;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+p a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 25px;
+}
+
+p a:hover {
+  border-bottom: 3px solid rgb(85, 26, 139);
+}
